@@ -7,7 +7,13 @@
 A collection of PyBullet tutorials using Qibullet's NAO robot.
 
 ## Installation
-Refer to `pybullet_env.yml` file for the list of dependencies, or use conda to install.
+
+1. Clone the repo: 
+```
+git clone https://github.com/robogeekcanada/pybullet-tutorials.git
+```
+
+2. Conda install the environment: `**pybullet_env.yml**` or refer to list of dependencies required in **.yml** file.
 
 ```
 conda env create --file pybullet_env.yml
