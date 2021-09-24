@@ -1,5 +1,4 @@
 import numpy as np
-import pybullet_envs
 import time
 #import matplotlib.pyplot as plt
 import pybullet as p
@@ -12,6 +11,9 @@ import cv2
 from qibullet import SimulationManager
 from qibullet import NaoVirtual
 from qibullet import Camera
+
+import os
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -31,6 +33,10 @@ P_SIT_RELAX = NaoPosture("SitRelax")
 P_LYING_BELLY = NaoPosture("LyingBelly")
 P_LYING_BACK = NaoPosture("LyingBack")
 '''
+
+cwd = os.getcwd()
+data_folder = Path(cwd)/'motions'
+
 
 def read_csv(filename):
 
@@ -75,7 +81,7 @@ def main():
     #Wave hand
     print('\nWaving hand...')
     
-    filename = '/home/osilva/soccer_project/motions/HandWave.csv'
+    filename = str(data_folder/'motions/HandWave.csv')
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot)
 
@@ -95,7 +101,7 @@ def main():
     
     #Walking forward
     print('\nWalk Forward a couple small steps...')
-    filename = '/home/osilva/soccer_project/motions/Forwards.csv'
+    filename = str(data_folder/'motions/Forwards.csv')
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot, delay=0.01)
 
@@ -103,7 +109,7 @@ def main():
 
     #Walking forward 50
     print('\nWalk Forward 50 test...')
-    filename = '/home/osilva/soccer_project/motions/Forwards50.csv'
+    filename = str(data_folder/'motions/Forwards50.csv')
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot, delay=0.01)
 
