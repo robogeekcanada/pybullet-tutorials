@@ -4,7 +4,7 @@
 
 # Pybullet Tutorials
 
-A collection of PyBullet tutorials using Qibullet's NAO robot.
+A collection of [PyBullet](https://pybullet.org/wordpress/) tutorials using [Qibullet](https://github.com/softbankrobotics-research/qibullet)'s NAO robot.
 
 ## Installation
 
