@@ -24,6 +24,9 @@ conda activate pybullet_env
 
 1. Complete installation, preferably in conda.Tested in Windows, Ubuntu and OS
 2. Unzip `meshes.zip` file into the working directory.
-3. Test `python nao_color_suits.py`
+3. Test 
+```
+python nao_color_suits.py
+```
 
 ![image](https://github.com/robogeekcanada/pybullet-tutorials/blob/main/images/nao_color_suits.PNG)
