@@ -34,9 +34,10 @@ python nao_color_suits.py
 
 ![image](https://github.com/robogeekcanada/pybullet-tutorials/blob/main/images/nao_color_suits.PNG)
 
-## How to use
+## Outline
 
-The objective of this tutorial is to learn how to access NAO's hardware to use in more advanced simulations.
+Each program is designed to explain how to access each component of NAO's hardware in simulation. By combining all these programs, it's possible to develop a robotics soccer game.
+
 
 `nao_cameras.py`         shows how to access both NAO's cameras
 
