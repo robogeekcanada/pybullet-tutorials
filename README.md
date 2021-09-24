@@ -7,7 +7,17 @@
 A collection of PyBullet tutorials using Qibullet's NAO robot.
 
 ## Installation
-Refer to pybullet_env.yml file for the list of dependencies, or use conda to install.
+Refer to `pybullet_env.yml` file for the list of dependencies, or use conda to install.
+
+```
+conda env create --file pybullet_env.yml
+conda activate pybullet_env
+```
 
 ## Instructions
-Please unzip meshes.zip file into the working directory.
+
+1. Complete installation, preferably in conda.Tested in Windows, Ubuntu and OS
+2. Unzip `meshes.zip` file into the working directory.
+3. Test `python nao_color_suits.py`
+
+![image](https://github.com/robogeekcanada/pybullet-tutorials/blob/main/images/nao_color_suits.PNG)
