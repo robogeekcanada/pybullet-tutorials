@@ -1,5 +1,6 @@
 import numpy as np
-import pybullet_envs
+import os
+from pathlib import Path
 import time
 #import matplotlib.pyplot as plt
 import pybullet as p
@@ -31,6 +32,12 @@ P_SIT_RELAX = NaoPosture("SitRelax")
 P_LYING_BELLY = NaoPosture("LyingBelly")
 P_LYING_BACK = NaoPosture("LyingBack")
 '''
+
+cwd = os.getcwd()
+
+data_folder = Path(cwd)
+motions_folder = data_folder/"motions/motions" 
+
 
 def read_csv(filename):
 
@@ -70,7 +77,7 @@ def main():
     #Wave hand
     print('\nWaving hand...')
     
-    filename = '/home/osilva/soccer_project/motions/HandWave.csv'
+    filename = motions_folder/'HandWave.csv'
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot)
 
@@ -78,7 +85,7 @@ def main():
 
     #Walking forward
     print('\nWalk Forward a couple small steps...')
-    filename = '/home/osilva/soccer_project/motions/Forwards.csv'
+    filename = motions_folder/'Forwards.csv'
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot, delay=0.01)
 
@@ -86,7 +93,7 @@ def main():
 
     #Walking forward 50
     print('\nWalk Forward 50 test...')
-    filename = '/home/osilva/soccer_project/motions/Forwards50.csv'
+    filename = motions_folder/'Forwards50.csv'
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot, delay=0.01)
 
@@ -94,7 +101,7 @@ def main():
 
     #Backwards
     print('\nBackwards...')
-    filename = '/home/osilva/soccer_project/motions/Backwards.csv'
+    filename = motions_folder/'Backwards.csv'
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot, delay=0.01)
 
@@ -102,7 +109,7 @@ def main():
 
     #Shoot
     print('\nShoot test...')
-    filename = '/home/osilva/soccer_project/motions/Shoot.csv'
+    filename = motions_folder/'Shoot.csv'
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot, delay=0.01)
 
@@ -110,7 +117,7 @@ def main():
 
     #Side Step Left
     print('\nSide Step left...')
-    filename = '/home/osilva/soccer_project/motions/SideStepLeft.csv'
+    filename = motions_folder/'SideStepLeft.csv'
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot, delay=0.0)
 
@@ -118,7 +125,7 @@ def main():
 
     #Side Step Right
     print('\nSide Step right...')
-    filename = '/home/osilva/soccer_project/motions/SideStepRight.csv'
+    filename = motions_folder/'SideStepRight.csv'
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot, delay=0.0)
 
@@ -132,7 +139,7 @@ def main():
 
     #Stand up from Front
     print('\nStand up from front...')
-    filename = '/home/osilva/soccer_project/motions/StandUpfromFront.csv'
+    filename = 'motions\\StandUpfromFront.csv'
     num_poses, num_joints, joint_names, df = read_csv(filename)
     animate(num_poses, num_joints, joint_names, df, robot, delay=0.03)
   
@@ -166,11 +173,5 @@ def main():
 
     pos_orientation = p.getBasePositionAndOrientation(1)
 
-    #Todo: body resets but disappears
-    p.resetBasePositionAndOrientation(1, [0, 0, 4.0], [0,0,0,0])
-
-    print('\n', p.getNumBodies())
-
-
-        
+       
 main()
