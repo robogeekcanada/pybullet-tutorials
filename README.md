@@ -48,7 +48,7 @@ The objective of this tutorial is to learn how to access NAO's hardware to use i
 
 `nao_joints_control2.py` same but using a different technique to access the hardware.
 
-`nao_motions.py`         shows how to read motion files by hacking this [Webots files](https://github.com/cyberbotics/webots/tree/master/projects/robots/softbank/nao/motions).
+`nao_motions.py`         shows how to read motion files by hacking these [Webots files](https://github.com/cyberbotics/webots/tree/master/projects/robots/softbank/nao/motions).
 
 `nao_player_label.py`    shows how to add a player number
 
