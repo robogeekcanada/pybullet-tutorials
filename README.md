@@ -8,6 +8,17 @@ A collection of [PyBullet](https://pybullet.org/wordpress/) tutorials using [Qib
 
 ## Installation
 
+### Ubuntu or WSL
+
+```
+$ pip install pybullet
+$ pip install qibullet
+```
+
+### Windows
+
+For Windows I strongly recommend using Conda for the installation.
+
 1. Clone the repo: 
 ```
 git clone https://github.com/robogeekcanada/pybullet-tutorials.git
