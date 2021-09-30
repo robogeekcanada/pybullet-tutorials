@@ -68,4 +68,4 @@ Each program is designed to explain how to access each component of NAO's hardwa
 
 `nao_teleportation.py`   shows how to move to different positions by "teleporting"
 
-This repo is a way to give back to Open Source Community. Feel free to contribute and give feedback. Cheers. Happy Coding!
+This repo is a way to give back to Open Source Community. Feel free to contribute and give feedback. Cheers. Happy Coding everyone!
