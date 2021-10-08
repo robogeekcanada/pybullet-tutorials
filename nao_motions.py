@@ -36,7 +36,7 @@ P_LYING_BACK = NaoPosture("LyingBack")
 cwd = os.getcwd()
 
 data_folder = Path(cwd)
-motions_folder = data_folder/"motions/motions" 
+motions_folder = data_folder/"motions"     #/motions" 
 
 
 def read_csv(filename):
